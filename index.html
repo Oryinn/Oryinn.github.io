@@ -1,1 +1,54 @@
-Hello World
+<link href="style.css" rel="stylesheet">
+
+<title>Jordan Williams</title>
+<h1>Jordan Williams</h1>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+  
+ <img src="https://i.imgur.com/0uDZQ04.png"width="300">
+
+</header>	
+<body>
+	I am a 23 year old student, streamer, and music enthusiast living in Atlanta, Georgia. I have had an interest in coding and web development since I was very young and saw what my dad did for his work. I am currently employed at Premier Events as a festival/venue crew lead and barback. I hope to use this course to change my professional path and be able to use it for my hobbies as well! 
+	<br>
+	<br>
+	
+<button class="contact-button" onclick="openForm()">Contact Me!</button>
+
+<div class="form-popup" id="myForm">
+  <form  class="form-container">
+    <h2>Contact!</h2>
+
+	<label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="message"><b>Message</b></label>
+    <input type="text" placeholder="What do you think?" name="message" required>
+
+    <button type="submit" class="btn" onclick="contactConfirmation()">Submit</button>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function contactConfirmation() {
+	var name = document.getElementById("name").value;
+	alert("Thanks for contacting us, " + name );
+}
+</script>
+
+</body>
